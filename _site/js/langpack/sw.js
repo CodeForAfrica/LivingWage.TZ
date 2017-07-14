@@ -7,7 +7,10 @@ Lang.prototype.pack.sw = {
 		"per day":"kwa siku",
 		"per week":"kwa wiki",
 		"per month":"kwa mwezi",
+		"At this rate, you are paying the equivalent of":"Kwa kiwango hiki, unalipa sawa na",
 		"Calculate expenses":"Kokotoa matumizi",
+		"This covers":"Hii inajumuisha",
+		"of the household's minimal need of":"ya mahitaji ya chini ya kaya ya",
 		"Brought to you by":"Imeletwa kwako na",
 	},
 	"regex": [

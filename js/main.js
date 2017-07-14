@@ -182,7 +182,6 @@ function validate_input(household_size, pay_rate, pay_amount) {
 
 
 function update_output() {
-
     // read input
     var household_size = $("#household-size").val();
     var pay_rate = $("#pay-rate").val();
@@ -216,7 +215,12 @@ function update_output() {
             output_statement = "You're very close to paying a fair wage given the living costs and the size of your domestic worker's household. Share your results!";
             highlight_output('label-warning');
         } else {
-            output_statement = "You're covering your domestic worker's Minimal Need. Share your results!";
+            if(lang.currentLang == "en"){
+                output_statement = "You're covering your domestic worker's Minimal Need. Share your results!";
+            }
+            else if(lang.currentLang == "sw"){
+                output_statement = "Unakizi mahitaji madogo ya mfanyakazi wako wa ndani. Shirikisha matokeo yako!";
+            }
             highlight_output('label-success');
         }
 
