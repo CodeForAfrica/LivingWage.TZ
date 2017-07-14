@@ -12,10 +12,10 @@ constants = {
 
 function to_rands(val) {
     if (val != parseInt(val)){
-        return "R" + val.toFixed(2);
+        return "TZS " + val.toFixed(2);
     }
     else {
-        return "R" + val;
+        return "TZS " + val;
     }
 }
 
@@ -308,7 +308,7 @@ $(document).ready(function() {
     })
 
     function rand_formater(value) {
-        return value + ' rand';
+        return value + ' TZS';
     }
 
     function child_formater(value) {
