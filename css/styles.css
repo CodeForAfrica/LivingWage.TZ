@@ -380,3 +380,25 @@ h1, h2, h3, h4, h5, h6{
 	font-size: 0.8em;
 
 }
+
+/* -- Language Translation Styles -- */
+.negative65-top-margin{
+  margin-top: -65px;
+}
+
+.language-switcher{
+  height: 65px;
+}
+
+.language-switcher-btns{
+  background: #fff;
+  padding: 15px;
+  color: #666;
+  border: 1px solid #dedede;
+  border-top: none;
+  border-bottom: none;
+}
+
+.language-switcher-btns span{
+  font-size: 13px;
+}
