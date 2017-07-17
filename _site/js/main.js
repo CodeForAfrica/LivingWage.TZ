@@ -174,7 +174,12 @@ function validate_input(household_size, pay_rate, pay_amount) {
     }
     if (household_size && pay_rate && pay_amount){
         // update user feedback text
-        $("#household-size-feedback").html(household_size + " people")
+        if(lang.currentLang == "en"){
+            $("#household-size-feedback").html(household_size + " people")
+        }
+        else if(lang.currentLang == "sw"){
+            $("#household-size-feedback").html("Watu " + household_size)
+        }
         return true
     }
     return false
@@ -206,7 +211,12 @@ function update_output() {
 
         var output_statement = "Try out the fair wage tool and see how your pay reflects living costs in South Africa.";
         if ((output_percentage >= 0) && (output_percentage < constants.output_low)) {
-            output_statement = "You're paying too little given the living costs and the size of your domestic worker's household. Take time to reassess how much you're paying by using our tool.";
+            if(lang.currentLang == "en"){
+                output_statement = "You're paying too little given the living costs and the size of your domestic worker's household. Take time to reassess how much you're paying by using our tool.";
+            }
+            else if(lang.currentLang == "sw"){
+                output_statement = "Unalipa kidogo sana kutokana na gharama za maisha na ukubwa wa kaya ya mfanyakazi wako wa nyumbani. Chukua muda kuthaminisha kiasi gani unacholipa kwa kutumia zana yetu.";
+            }
             highlight_output('label-danger');
         } else if ((output_percentage >= 75) && (output_percentage < constants.output_almost)) {
             output_statement = "You're nearly there! Take time to reassess the wage by using our tool or discussing costs with your domestic worker.";
@@ -312,21 +322,45 @@ $(document).ready(function() {
     })
 
     function rand_formater(value) {
-        return value + ' TZS';
+        return 'TZS ' + value;
     }
 
     function child_formater(value) {
-        if (value == 1)
-            return '1 child';
-        else
-            return value + ' children';
+        if (value == 1){
+            if(lang.currentLang == "en"){
+                return '1 child';
+            }
+            else if(lang.currentLang == "sw"){
+                return 'Mtoto 1';
+            }
+        }
+        else{
+            if(lang.currentLang == "en"){
+                return value + ' children';
+            }
+            else if(lang.currentLang == "sw"){
+                return 'Watoto ' + value;
+            }
+        }
     }
 
     function people_formater(value) {
-        if (value == 1)
-            return '1 person';
-        else
-            return value + ' people';
+        if (value == 1){
+            if(lang.currentLang == "en"){
+                return '1 person';
+            }
+            else if(lang.currentLang == "sw"){
+                return 'Mtu 1';
+            }
+        }
+        else{
+            if(lang.currentLang == "en"){
+                return value + ' people';
+            }
+            else if(lang.currentLang == "sw"){
+                return 'Watu ' + value;
+            }
+        }
     }
 
     $(this).find(".slider").each(function(i) {

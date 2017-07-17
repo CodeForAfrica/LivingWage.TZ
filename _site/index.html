@@ -168,7 +168,7 @@
 
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-center">
-            <button id="show-assumptions-btn" class="btn btn-primary btn-block btn-lg display-results"><i class="fa fa-arrow-circle-down"></i> Show assumptions</button>
+            <button id="show-assumptions-btn" class="btn btn-primary btn-block btn-lg display-results"><i class="fa fa-arrow-circle-down"></i> <span lang="en">Show assumptions</span></button>
           </div>
         </div>
 
@@ -186,13 +186,13 @@
 
 	     	<div class="col-sm-3 text-center">
 
-	        <h2>Assumptions</h2>
+	        <h2 lang="en">Assumptions</h2>
 
 	      </div>
 
 	      <div class="col-sm-9 text-center">
 
-	        <p>Our calculations are based on <strong style="display: inline-block;">9 assumptions</strong>.</p>
+	        <p><span lang="en">Our calculations are based on <strong style="display: inline-block;"><span lang="en">9 assumptions</span></strong>.</p>
 
 	      </div>
 
@@ -207,7 +207,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-household-size">
             <h4 class="panel-title">
               <span>
-                1. Household Size <span id="household-size-feedback" class="pull-right">... people</span>
+                1. <span lang="en">Household Size</span> <span id="household-size-feedback" class="pull-right">... <span lang="en">people</span></span>
               </span>
             </h4>
           </div>
@@ -219,7 +219,7 @@
 	            <div class="col-sm-9">
 
 	              <div class="form-group">
-	                <label for="household-size" class="lead question">Including your domestic worker, <strong>how large is their household</strong>?</label><br>
+	                <label for="household-size" class="lead question"><span lang="en">Including your domestic worker</span>, <strong lang="en">how large is their household</strong>?</label><br>
 	                <input
 	                    id="household-size"
 	                    class="slider"
@@ -244,10 +244,10 @@
 	            </div>
 
               <p class="note">
-                75% of domestic workers are known to be sole income providers for their households.
+                75% <span lang="en">of domestic workers are known to be sole income providers for their households.</span>
               </p>
               <p class="sources">
-                <strong>Source:</strong> NIDS 2012
+                <strong lang="en">Source:</strong> NIDS 2012
               </p>
             </div>
           </div>
@@ -263,7 +263,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-food-expenses">
             <h4 class="panel-title">
               <span>
-                2. Food Cost <span id="food-total" class="pull-right">R...</span>
+                2. <span lang="en">Food Cost</span> <span id="food-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -275,7 +275,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="food-cost" class="lead question">What do you estimate are the daily <strong>food costs</strong> per person in your domestic worker's household?</label><br>
+			                <label for="food-cost" class="lead question"><span lang="en">What do you estimate are the daily</span> <strong lang="en">food costs</strong> <span lang="en">per person in your domestic worker's household?</span></label><br>
 			                
 			                <input
 			                    id="food-cost"
@@ -305,13 +305,13 @@
 
 							</div>            	
 
-              
+              <!-- 
               <p class="note">Using consumer price index data on food (April 2014) and a selected basket of goods, <strong>we estimate that the daily average cost per person for attaining 2000 calories is R27</strong> (R815 per month per person).</p>
               <p class="note">
                 We have not incorporated the food nutrition program or child support grants in our assessment. We feel our values are still quite conservative.
-              </p>
+              </p> -->
               <p class="sources">
-                <strong>Source:</strong> Food - CPI Apr 2014 data, STATS SA
+                <strong lang="en">Source:</strong> Food - CPI Apr 2014 data, STATS SA
               </p>
             </div>
           </div>
@@ -327,7 +327,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-transport-expenses">
             <h4 class="panel-title">
               <span>
-                3. Transportation Cost <span id="transport-total" class="pull-right">R...</span>
+                3. <span lang="en">Transportation Cost</span> <span id="transport-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -339,7 +339,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="transport-cost" class="lead question">How much does it cost your domestic worker to <strong>get to work</strong>?</label><br>
+			                <label for="transport-cost" class="lead question"><span lang="en">How much does it cost your domestic worker to</span> <strong lang="en">get to work</strong>?</label><br>
 			                <input
 			                    id="transport-cost"
 			                    class="slider"
@@ -354,10 +354,10 @@
 			                    data-slider-formater="TZS"/><br>
 			              </div>
 			              <div class="form-group">
-			                <label for="transport-direction" class="lead question">Is this cost <strong>one way</strong> or for a <strong>roundtrip</strong>?</label><br>
+			                <label for="transport-direction" class="lead question"><span lang="en">Is this cost</span> <strong lang="en">one way</strong> <span lang="en">or for a</span> <strong lang="en">roundtrip</strong>?</label><br>
 			                <select class="selectpicker" name="transport-direction" id ="transport-direction"><br>
-			                  <option value="oneway" selected>one way</option>
-			                  <option value="roundtrip">round trip</option>
+			                  <option value="oneway" selected lang="en">one way</option>
+			                  <option value="roundtrip" lang="en">round trip</option>
 			                </select>
 			              </div>							    
 
@@ -370,6 +370,7 @@
 
 							</div>
 
+              <!--
               <p class="note">Travel costs are known to be high for domestic workers. <strong>We assume a need of R14 one way to get to work</strong>, based on an informal survey of domestic workers in Cape Town.
               </p>
               <p class="note">
@@ -381,7 +382,7 @@
                 Transportation is not cheap in Cape Town (public or private) and this is likely true through South Africa.
                 Of course if the tariff or the number of trips from poorer areas to urban employer centres were lower
                 then the cost would be lower. But it can also be higher depending on the distance.
-              </p>
+              </p> -->
 
             </div>
           </div>
@@ -397,7 +398,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-rent-expenses">
             <h4 class="panel-title">
               <span>
-                4. Housing Cost <span id="rent-total" class="pull-right">R...</span>
+                4. <span lang="en">Housing Cost</span> <span id="rent-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -409,7 +410,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="rent-cost" class="lead question">How much do you estimate are your domestic worker's <strong>rent and utility costs</strong> (including electricity)?</label><br>
+			                <label for="rent-cost" class="lead question"><span lang="en">How much do you estimate are your domestic worker's</span> <strong lang="en">rent and utility costs</strong> <span lang="en">(including electricity)?</span></label><br>
 			                <input
 			                    id="rent-cost"
 			                    class="slider"
@@ -433,15 +434,16 @@
 
 							</div>            	
 
-              <p class="note">
+              <p class="note" lang="en">
                 Generally speaking, higher rents are associated with better provision of sanitation services and lower crime rates.
               </p>
+              <!-- 
               <p class="note">
                 Associations with violence and sanitation taken from this data as well. Where rent was not paid (or reported), the assumption was that the household lived in informal risky settings. We don't want to highlight that as a residential option.
               </p>
               <p class="sources">
-                <strong>Source:</strong> Housing - NIDS 2012, UCT
-              </p>
+                <strong lang="en">Source:</strong> Housing - NIDS 2012, UCT
+              </p> -->
             </div>
           </div>
         </div>
@@ -456,7 +458,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-health-expenses">
             <h4 class="panel-title">
               <span>
-                5. Healthcare Cost <span id="health-total" class="pull-right">R...</span>
+                5. <span lang="en">Healthcare Cost</span> <span id="health-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -468,8 +470,8 @@
 							    <div class="col-sm-9">
 
 			              <div class="form-group">
-			                <label for="rent-cost" class="lead question">What is a reasonable monthly allowance for <strong>healthcare</strong> needs?</label><br>
-			                <p>Estimate a reasonable monthly health allowance (per person):</p>
+			                <label for="rent-cost" class="lead question"><span lang="en">What is a reasonable monthly allowance for</span> <strong lang="en">healthcare</strong> <span lang="en">needs</span>?</label><br>
+			                <p lang="en">Estimate a reasonable monthly health allowance (per person):</p>
 			                <input
 			                    id="health-cost"
 			                    class="slider"
@@ -493,11 +495,12 @@
 
 							</div>
 
+              <!-- 
               <p class="note">
                 Setting up a health budget for the household is very important. <strong>Public consultancies cost R39 per visit and for medicines.</strong> Healthcare costs could also be covered through health insurance which can cost at least R299 per month per person.
-              </p>
+              </p> -->
               <p class="sources">
-                  <strong>Sources:</strong> <br>
+                  <strong lang="en">Sources:</strong> <br>
                   <a href="http://www.southafrica.info/services/health/healthfaq.htm" target="_blank">http://www.southafrica.info/services/health/healthfaq.htm</a><br>
                   <a href="http://www.medicalaid.co.za/MedicalAid/MedicalAidfortheLowIncomeEarner.aspx" target="_blank">http://www.medicalaid.co.za/MedicalAid/MedicalAidfortheLowIncomeEarner.aspx</a>
               </p>
@@ -515,7 +518,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-education-expenses">
             <h4 class="panel-title">
               <span>
-                6. Education Cost<span id="education-total" class="pull-right">R...</span>
+                6. <span lang="en">Education Cost</span><span id="education-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -527,8 +530,8 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="education-cost" class="lead question">What much do you estimate your domestic worker spends on <strong>sending kids to school</strong>?</label>
-			                <p>Estimate the cost per school aged child: </p>
+			                <label for="education-cost" class="lead question"><span lang="en">What much do you estimate your domestic worker spends on</span> <strong lang="en">sending kids to school</strong>?</label>
+			                <p lang="en">Estimate the cost per school aged child: </p>
 			                <input
 			                    id="education-cost"
 			                    class="slider"
@@ -543,7 +546,7 @@
 			                    data-slider-formater="TZS"/><br>
 			                </div>
 			                <div class="form-group">
-			                <label for="education-cost" class="lead question">How many school-aged children are there in the household?</label>
+			                <label for="education-cost" class="lead question" lang="en">How many school-aged children are there in the household?</label>
 			               
 			                <input
 			                    id="education-kids"
@@ -569,22 +572,22 @@
 
 							</div>
 
-							<p class="note">
+							<p class="note" lang="en">
 								Expenses include stationery, uniform, textbooks, and even transportation costs.
 							</p>
 
-							<p class="note">
+							<p class="note" lang="en">
 								We assume two individuals in the household are in school.
 							</p>
-
+              <!-- 
               <p class="note">
                 <strong>Median expenditure on education is between R100 and R200/month per kid.</strong> There isn't a clear determination of costs per month for a family sending kids to school. It's likely on transportation, stationery, etc - but there are some definite costs.
               </p>
               <p class="note">
                 We limit the slider to R1000 because households are unlikely to be willing to pay more than that for kids. Public schools with fees and private schools can cost at R1000 and be upwards of R8000/month.
-              </p>
+              </p> -->
               <p class="sources">
-                <strong>Sources:</strong><br>
+                <strong lang="en">Sources:</strong><br>
                 NIDS 2012<br>
                 <a href="http://www.education.gov.za/LinkClick.aspx?fileticket=oAFdXOY5hKo%3D&tabid=452&mid=1038">http://www.education.gov.za/LinkClick.aspx?fileticket=oAFdXOY5hKo%3D&tabid=452&mid=1038</a>
                 </ul>
@@ -603,7 +606,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-communication-expenses">
             <h4 class="panel-title">
               <span>
-                7. Communications Cost<span id="communication-total" class="pull-right">R...</span>
+                7. <span lang="en">Communications Cost</span> <span id="communication-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -615,8 +618,8 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="communication-cost" class="lead question">What do you estimate each member of your domestic worker's household spends on <strong>communcation</strong>?</label><br>
-			                <p>Estimate the monthly cost per person in the household:</p>
+			                <label for="communication-cost" class="lead question"><span lang="en">What do you estimate each member of your domestic worker's household spends on</span> <strong lang="en">communication</strong>?</label><br>
+			                <p lang="en">Estimate the monthly cost per person in the household:</p>
 			                <input
 			                    id="communication-cost"
 			                    class="slider"
@@ -640,7 +643,7 @@
 
 							</div>
 
-                <p class="note">
+                <p class="note" lang="en">
                   Communications are necessary for staying in touch with families, friends, accessing news, and for emergencies. 
                 </p>
               
@@ -658,7 +661,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-recreation-expenses">
             <h4 class="panel-title">
               <span>
-                8. Recreation Cost<span id="recreation-total" class="pull-right">R...</span>
+                8. <span lang="en">Recreation Cost</span> <span id="recreation-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -670,8 +673,8 @@
 							    <div class="col-sm-9">
 
 			              <div class="form-group">
-			                <label for="recreation-cost" class="lead question">How much do you estimate each household members spends on <strong>entertainment & recreation</strong>?</label><br>
-			                <p>Estimate a monthly recreation cost per person in the household:</p>
+			                <label for="recreation-cost" class="lead question"><span lang="en">How much do you estimate each household members spends on</span> <strong lang="en">entertainment & recreation</strong>?</label><br>
+			                <p lang="en">Estimate a monthly recreation cost per person in the household:</p>
 			                <input
 			                    id="recreation-cost"
 			                    class="slider"
@@ -695,7 +698,7 @@
 
 							</div>
 
-							<p class="note">
+							<p class="note" lang="en">
                 It is always good to take time out from work and managing a household. Everyone needs a break!
               </p>
 
@@ -713,7 +716,7 @@
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-other-expenses">
             <h4 class="panel-title">
               <span>
-                9. Other Costs<span id="other-total" class="pull-right">R...</span>
+                9. <span lang="en">Other Costs</span><span id="other-total" class="pull-right">R...</span>
               </span>
             </h4>
           </div>
@@ -725,7 +728,7 @@
 							    <div class="col-sm-9">
 
 			              <div class="form-group">
-			                <label for="other-cost" class="lead question">How much would you estimate are <strong>other miscellaneous costs</strong> incurred by your domestic worker's household?</label><br>
+			                <label for="other-cost" class="lead question"><span lang="en">How much would you estimate are</span> <strong lang="en">other miscellaneous costs</strong> <span lang="en">incurred by your domestic worker's household?</span></label><br>
 			                <input
 			                    id="other-cost"
 			                    class="slider"
@@ -749,10 +752,10 @@
 
 							</div>
 
-              <p class="note">
+              <p class="note" lang="en">
               	These include clothing, household items, personal care, and emergency expenses. Estimate other costs incurred per person in the household.
               </p>
-              <p class="note">
+              <p class="note" lang="en">
                 This should including for emergencies and procurement of durable goods, transportation of goods (gas cylinders, groceries, etc), implicit and explicit costs of running a household.
               </p>
 
@@ -768,8 +771,8 @@
 
 				<div class="col-sm-8 col-sm-offset-2">
 
-					<p>Using your input, we've calculated the minimum amount you should pay your domestic worker.</p>
-					<p><a href="#results"><button class="btn btn-primary btn-sm"><i class="fa fa-arrow-circle-up fa-lg"></i>Click here to see the results</button></a></p>
+					<p lang="en">Using your input, we've calculated the minimum amount you should pay your domestic worker.</p>
+					<p><a href="#results"><button class="btn btn-primary btn-sm"><i class="fa fa-arrow-circle-up fa-lg"></i><span lang="en">Click here to see the results</span></button></a></p>
 
 				</div>
 
@@ -784,7 +787,7 @@
 <div id="footer">
   <div class="text-center">
     <p id="attribution"><span lang="en">Brought to you by</span>&nbsp;&nbsp;<a href="http://www.codefortanzania.org" target="_blank"><img height="34" src="images/logo.png"></a>.</p>
-    <p><i class="fa fa-github"></i> <a href="https://github.com/CodeForTanzania/Domestic-Workers">Fork this on GitHub</a></p>
+    <p><i class="fa fa-github"></i> <a href="https://github.com/CodeForTanzania/Domestic-Workers"><span lang="en">Fork this on GitHub</span></a></p>
     <div id="tweetBtn">
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://livingwage.codefortanzania.org" data-text="Are you paying your domestic worker a living wage?" data-via="code4sa" data-hashtags="livingwage">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
