@@ -22,10 +22,14 @@ function to_rands(val) {
 function calculate_transport(household_size) {
     var trans_cost = $("#transport-cost").val();
     var trans_direction = $("#transport-direction").val();
+
+    // Transport to base on working days per week.
+    var working_days = $('#working-days').val();
+    
     if (trans_direction == "oneway")
-        var out = Math.round(2 * trans_cost * constants.workdays_per_month);
+        var out = Math.round(2 * trans_cost * (constants.weeks_per_month * working_days));
     else
-        var out = Math.round(trans_cost * constants.workdays_per_month);
+        var out = Math.round(trans_cost * (constants.weeks_per_month * working_days));
 
     $("#transport-total").html(to_rands(out));
 
@@ -121,7 +125,7 @@ function calculate_expenditure(household_size) {
     total += calculate_education(household_size);
     total += calculate_health(household_size);
     total += calculate_communication(household_size);
-    total += calculate_recreation(household_size);
+    //total += calculate_recreation(household_size);
     total += calculate_other(household_size);
 
     return Math.round(total)
@@ -191,6 +195,7 @@ function update_output() {
     var household_size = $("#household-size").val();
     var pay_rate = $("#pay-rate").val();
     var pay_amount = $("#pay-amount").val();
+    var working_days = $('#working-days').val();
 
     if (validate_input(household_size, pay_rate, pay_amount)) {
         var monthly_expenditure = calculate_expenditure(household_size);
@@ -199,7 +204,7 @@ function update_output() {
         var monthly_pay = 0;
         // Assumption using DoL info - a month includes 4.33 weeks and a week is for 5 work days.
         if (pay_rate == "day")
-            monthly_pay = pay_amount * constants.workdays_per_month;
+            monthly_pay = pay_amount * (constants.weeks_per_month * working_days);
         else if (pay_rate == "week")
             monthly_pay = pay_amount * constants.weeks_per_month;
         else if (pay_rate == "month")
@@ -284,6 +289,9 @@ $(document).ready(function() {
 
     // initialize dropdown selects
     $("#pay-rate").selectpicker().on("change", function() {
+        update_output();
+    })
+    $("#working-days").selectpicker().on("change", function() {
         update_output();
     })
     $("#pay-amount").on("change", function() {

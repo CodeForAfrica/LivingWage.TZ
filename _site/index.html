@@ -87,24 +87,35 @@
           <div class="form-group">
             <label class="control-label lead question" for="pay-amount" lang="en">How much do you pay your household worker?</label><br>
             <div class="row">
-              <div class="col-sm-9">
+              <div class="col-sm-6">
                 <input
                     id="pay-amount"
                     class="slider"
                     style="width: 100%;"
                     type="text"
                     name="pay-amount"
-                    data-slider-min="50"
-                    data-slider-max="8000"
-                    data-slider-step="10"
-                    value="500"
-                    data-slider-value="500"/>
+                    data-slider-min="500"
+                    data-slider-max="500000"
+                    data-slider-step="500"
+                    value="1000"
+                    data-slider-value="1000"/>
               </div>
               <div class="col-sm-3">
                 <select class="selectpicker" name="pay-rate" data-width="100%" id="pay-rate">
                   <option value="day" selected lang="en">per day</option>
                   <option value="week" lang="en">per week</option>
                   <option value="month" lang="en">per month</option>
+                </select>
+              </div>
+               <div class="col-sm-3">
+                <select class="selectpicker" name="working-days" data-width="100%" id="working-days">
+                  <option value="1" lang="en">1 day per week</option>
+                  <option value="2" lang="en">2 days per week</option>
+                  <option value="3" lang="en">3 days per week</option>
+                  <option value="4" lang="en">4 days per week</option>
+                  <option value="5" selected lang="en">5 days per week</option>
+                  <option value="6" lang="en">6 days per week</option>
+                  <option value="7" lang="en">7 days per week</option>
                 </select>
               </div>
             </div>
@@ -192,7 +203,7 @@
 
 	      <div class="col-sm-9 text-center">
 
-	        <p><span lang="en">Our calculations are based on <strong style="display: inline-block;"><span lang="en">9 assumptions</span></strong>.</p>
+	        <p><span lang="en">Our calculations are based on <strong style="display: inline-block;"><span lang="en">8 assumptions</span></strong>.</p>
 
 	      </div>
 
@@ -229,8 +240,8 @@
 	                    data-slider-min="1"
 	                    data-slider-max="20"
 	                    data-slider-step="1"
-	                    value="3"
-	                    data-slider-value="3"
+	                    value="5"
+	                    data-slider-value="5"
 	                    data-slider-formater="people"/><br>
 	              </div>
 
@@ -283,11 +294,11 @@
 			                    enabled="false"
 			                    type="text"
 			                    name="food-cost"
-			                    data-slider-min="5"
-			                    data-slider-max="100"
-			                    data-slider-step="1"
-			                    value="27"
-			                    data-slider-value="27"
+			                    data-slider-min="0"
+			                    data-slider-max="50000"
+			                    data-slider-step="500"
+			                    value="900"
+			                    data-slider-value="900"
 			                    data-slider-formater="TZS"/><br>
 
 			                <!--<button type="button" class="btn btn-danger" value="15">R15, Carb Heavy Diet</button>-->
@@ -346,11 +357,11 @@
 			                    enabled="false"
 			                    type="text"
 			                    name="transport-cost"
-			                    data-slider-min="5"
-			                    data-slider-max="50"
-			                    data-slider-step="1"
-			                    value="14"
-			                    data-slider-value="14"
+			                    data-slider-min="0"
+			                    data-slider-max="10000"
+			                    data-slider-step="50"
+			                    value="1600"
+			                    data-slider-value="1600"
 			                    data-slider-formater="TZS"/><br>
 			              </div>
 			              <div class="form-group">
@@ -418,10 +429,10 @@
 			                    type="text"
 			                    name="rent-cost"
 			                    data-slider-min="0"
-			                    data-slider-max="1500"
-			                    data-slider-step="100"
-			                    value="500"
-			                    data-slider-value="500"
+			                    data-slider-max="500000"
+			                    data-slider-step="500"
+			                    value="50000"
+			                    data-slider-value="50000"
 			                    data-slider-formater="TZS"/><br>
 			              </div>
 
@@ -479,10 +490,10 @@
 			                    type="text"
 			                    name="health-cost"
 			                    data-slider-min="0"
-			                    data-slider-max="300"
-			                    data-slider-step="10"
-			                    value="40"
-			                    data-slider-value="40"
+			                    data-slider-max="500000"
+			                    data-slider-step="500"
+			                    value="10000"
+			                    data-slider-value="10000"
 			                    data-slider-formater="TZS"/><br>
 			              </div>
 
@@ -539,10 +550,10 @@
 			                    type="text"
 			                    name="education-cost"
 			                    data-slider-min="0"
-			                    data-slider-max="1000"
-			                    data-slider-step="20"
-			                    value="100"
-			                    data-slider-value="100"
+			                    data-slider-max="200000"
+			                    data-slider-step="500"
+			                    value="20000"
+			                    data-slider-value="20000"
 			                    data-slider-formater="TZS"/><br>
 			                </div>
 			                <div class="form-group">
@@ -627,10 +638,10 @@
 			                    type="text"
 			                    name="communication-cost"
 			                    data-slider-min="0"
-			                    data-slider-max="1000"
-			                    data-slider-step="25"
-			                    value="100"
-			                    data-slider-value="100"
+			                    data-slider-max="200000"
+			                    data-slider-step="500"
+			                    value="15000"
+			                    data-slider-value="15000"
 			                    data-slider-formater="TZS"/>
 			              </div>
 
@@ -655,7 +666,8 @@
         <!-- Communication Panel end -->
 
         <!-- Recreation Panel -->
-    <div class="row">
+    <!-- We do not consider Recreation for Tanzania -->
+    <div class="row" style="display:none;">
       <div class="col-sm-8 col-sm-offset-2">     
         <div class="panel panel-default" id="assumption-8">
           <div class="panel-heading" data-toggle="collapse" data-target="#panel-recreation-expenses">
@@ -736,10 +748,10 @@
 			                    type="text"
 			                    name="other-cost"
 			                    data-slider-min="0"
-			                    data-slider-max="1000"
-			                    data-slider-step="50"
-			                    value="200"
-			                    data-slider-value="200"
+			                    data-slider-max="100000"
+			                    data-slider-step="500"
+			                    value="10000"
+			                    data-slider-value="10000"
 			                    data-slider-formater="TZS"/>
 			              </div>
 
