@@ -1,7 +1,7 @@
 Lang.prototype.pack.sw = {
 	"token": {
 		"Wage Calculator":"Kokotozi Mshahara",
-		"Living Wage":"Mshahara wa Maisha",
+		"Living Wage":"Gharama za Maisha",
 		"Are you paying your domestic worker enough?":"Je, mfanyakazi wako wa nyumbani unamlipa kiasi cha kutosha?",
 		"How much do you pay your household worker?":"Unamlipa kiasi gani mfanyakazi wako wa nyumbani?",
 		"per day":"kwa siku",
@@ -70,6 +70,13 @@ Lang.prototype.pack.sw = {
 		"Click here to see the results":"Bonyeza hapa kuona matokeo",
 		"Brought to you by":"Imeletwa kwako na",
 		"Fork this on GitHub":"Iume hii kwenye GitHub",
+		"1 day per week":"siku 1 kwa wiki",
+		"2 days per week":"Siku 2 kwa wiki",
+		"3 days per week":"Siku 3 kwa wiki",
+		"4 days per week":"Siku 4 kwa wiki",
+		"5 days per week":"Siku 5 kwa wiki",
+		"6 days per week":"Siku 6 kwa wiki",
+		"7 days per week":"Siku 7 kwa wiki",
 	},
 	"regex": [
 	]
