@@ -14,7 +14,7 @@ Lang.prototype.pack.sw = {
 		"Show assumptions":"Onyesha dhana",
 		"Assumptions":"Dhana",
 		"Our calculations are based on":"Mahesabu yetu yanategemea",
-		"9 assumptions":"dhana 9",
+		"8 assumptions":"dhana 8",
 		"Household Size":"Ukubwa wa Kaya",
 		"people":"watu",
 		"Including your domestic worker":"Kujumuisha mfanyakazi wako wa ndani",
