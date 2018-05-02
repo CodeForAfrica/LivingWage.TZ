@@ -217,7 +217,7 @@ function update_output() {
         var output_statement = "Try out the fair wage tool and see how your pay reflects living costs in South Africa.";
         if ((output_percentage >= 0) && (output_percentage < constants.output_low)) {
             if(lang.currentLang == "en"){
-                output_statement = "You're paying too little given the living costs and the size of your domestic worker's household. Take time to reassess how much you're paying by using our tool.";
+                output_statement = "You're being paid too little given the living costs and the size of your domestic worker's household. Take time to reassess how much you're being paid by using our tool.";
             }
             else if(lang.currentLang == "sw"){
                 output_statement = "Unalipa kidogo sana kutokana na gharama za maisha na ukubwa wa kaya ya mfanyakazi wako wa nyumbani. Chukua muda kuthaminisha kiasi gani unacholipa kwa kutumia zana yetu.";

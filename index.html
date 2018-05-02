@@ -71,7 +71,7 @@
   <div class="row text-center">
     <div class="jumbotron">
       <h1 lang="en">Living Wage</h1>
-      <p class="lead" lang="en">Are you paying your domestic worker enough?</p>
+      <p class="lead" lang="en">Are you being paid enough?</p>
       <!-- <p class="small"><a href="http://livingwage.code4sa.org">Read more about domestic worker wages <i class="fa fa-external-link"></i></a></p> -->
     </div>
   </div>
@@ -86,7 +86,7 @@
 
         <form id="input-form" role="form">
           <div class="form-group">
-            <label class="control-label lead question" for="pay-amount" lang="en">How much do you pay your household worker?</label><br>
+            <label class="control-label lead question" for="pay-amount" lang="en">How much does your employer pay you?</label><br>
             <div class="row">
               <div class="col-sm-6">
                 <input
@@ -126,7 +126,7 @@
         <div class="row">
           <div class="col-sm-12">
             <p class="lead">
-              <span lang="en">At this rate, you are paying the equivalent of</span> <strong><span id="output-amount">R0</span></strong> <span lang="en">per month</span>.
+              <span lang="en">At this rate, you are being paid the equivalent of</span> <strong><span id="output-amount">R0</span></strong> <span lang="en">per month</span>.
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@
       <div class="section" id="results">
 
         <p class="lead">
-          <span lang="en">This covers</span> <span id="output-percentage" class="label">0%</span> <span lang="en">of the household's minimal need of</span> <strong><span id="output-monthly-need">R0</span></strong>.
+          <span lang="en">This covers</span> <span id="output-percentage" class="label">0%</span> <span lang="en"> of your household's minimal need of</span> <strong><span id="output-monthly-need">R0</span></strong>.
         </p>
 
       <div class="text-center">
@@ -231,7 +231,7 @@
 	            <div class="col-sm-9">
 
 	              <div class="form-group">
-	                <label for="household-size" class="lead question"><span lang="en">Including your domestic worker</span>, <strong lang="en">how large is their household</strong>?</label><br>
+	                <label for="household-size" class="lead question"><span lang="en">Including yourself</span>, <strong lang="en">how man people in your household are you responsible for</strong>?</label><br>
 	                <input
 	                    id="household-size"
 	                    class="slider"
@@ -254,10 +254,6 @@
 	             </div>
 
 	            </div>
-
-              <p class="note">
-                75% <span lang="en">of domestic workers are known to be sole income providers for their households.</span>
-              </p>
             </div>
           </div>
         </div>
@@ -284,7 +280,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="food-cost" class="lead question"><span lang="en">What do you estimate are the daily</span> <strong lang="en">food costs</strong> <span lang="en">per person in your domestic worker's household?</span></label><br>
+			                <label for="food-cost" class="lead question"><span lang="en">What do you estimate are your daily</span> <strong lang="en">food costs</strong> <span lang="en">per person in your household?</span></label><br>
 			                
 			                <input
 			                    id="food-cost"
@@ -345,7 +341,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="transport-cost" class="lead question"><span lang="en">How much does it cost your domestic worker to</span> <strong lang="en">get to work</strong>?</label><br>
+			                <label for="transport-cost" class="lead question"><span lang="en">How much does it cost you to</span> <strong lang="en">get to work</strong>?</label><br>
 			                <input
 			                    id="transport-cost"
 			                    class="slider"
@@ -416,7 +412,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="rent-cost" class="lead question"><span lang="en">How much do you estimate are your domestic worker's</span> <strong lang="en">rent and utility costs</strong> <span lang="en">(including electricity)?</span></label><br>
+			                <label for="rent-cost" class="lead question"><span lang="en">How much are you paying for <strong lang="en">rent and utility costs</strong> <span lang="en">(including electricity)?</span></label><br>
 			                <input
 			                    id="rent-cost"
 			                    class="slider"
@@ -476,7 +472,7 @@
 							    <div class="col-sm-9">
 
 			              <div class="form-group">
-			                <label for="rent-cost" class="lead question"><span lang="en">What is a reasonable monthly allowance for</span> <strong lang="en">healthcare</strong> <span lang="en">needs</span>?</label><br>
+			                <label for="rent-cost" class="lead question"><span lang="en">What is your monthly allowance for</span> <strong lang="en">healthcare</strong> <span lang="en">needs</span>?</label><br>
 			                <p lang="en">Estimate a reasonable monthly health allowance (per person):</p>
 			                <input
 			                    id="health-cost"
@@ -531,7 +527,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="education-cost" class="lead question"><span lang="en">What much do you estimate your domestic worker spends on</span> <strong lang="en">sending kids to school</strong>?</label>
+			                <label for="education-cost" class="lead question"><span lang="en">How much do you spend on</span> <strong lang="en">sending kids to school</strong>?</label>
 			                <p lang="en">Estimate the cost per school aged child: </p>
 			                <input
 			                    id="education-cost"
@@ -575,11 +571,8 @@
 
 							<p class="note" lang="en">
 								Expenses include stationery, uniform, textbooks, and even transportation costs.
-							</p>
-
-							<p class="note" lang="en">
-								We assume two individuals in the household are in school.
-							</p>
+              </p>
+              
               <!-- 
               <p class="note">
                 <strong>Median expenditure on education is between R100 and R200/month per kid.</strong> There isn't a clear determination of costs per month for a family sending kids to school. It's likely on transportation, stationery, etc - but there are some definite costs.
@@ -613,7 +606,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="communication-cost" class="lead question"><span lang="en">What do you estimate each member of your domestic worker's household spends on</span> <strong lang="en">communication</strong>?</label><br>
+			                <label for="communication-cost" class="lead question"><span lang="en">What do you estimate each member of your household spends on</span> <strong lang="en">communication</strong>?</label><br>
 			                <p lang="en">Estimate the monthly cost per person in the household:</p>
 			                <input
 			                    id="communication-cost"
@@ -669,7 +662,7 @@
 							    <div class="col-sm-9">
 
 			              <div class="form-group">
-			                <label for="recreation-cost" class="lead question"><span lang="en">How much do you estimate each household members spends on</span> <strong lang="en">entertainment & recreation</strong>?</label><br>
+			                <label for="recreation-cost" class="lead question"><span lang="en">How much would you estimate are other miscellaneous costs incurred by you and your household?</span></label><br>
 			                <p lang="en">Estimate a monthly recreation cost per person in the household:</p>
 			                <input
 			                    id="recreation-cost"
