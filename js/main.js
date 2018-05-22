@@ -220,7 +220,7 @@ function update_output() {
                 output_statement = "You're being paid too little given the living costs and the size of your domestic worker's household. Take time to reassess how much you're being paid by using our tool.";
             }
             else if(lang.currentLang == "sw"){
-                output_statement = "Unalipa kidogo sana kutokana na gharama za maisha na ukubwa wa kaya ya mfanyakazi wako wa nyumbani. Chukua muda kuthaminisha kiasi gani unacholipa kwa kutumia zana yetu.";
+                output_statement = "Unalipwa kiasi kidogo sana, ukilinganisha na gharama za maisha na ukubwa wa familia yako kama mfanyakazi anayefanya kazi za ndani. Tathmini mshahara unaolipwa kwa kutumia zana zetu.";
             }
             highlight_output('label-danger');
         } else if ((output_percentage >= 75) && (output_percentage < constants.output_almost)) {
